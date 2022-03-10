@@ -4,7 +4,7 @@
 # **About The Project** :
 
 This module helps you to add a new feature to the magento mini cart.
-As you know, if a customer has serverla open browser tabs and  adds a product to her/his cart, just the active tab mini cart will change and the other tab mini cart does not change. By this module any mini cart change will be sync in all the opened tabs.
+As you know, if a customer has several open browser tabs and  adds a product to her/his cart, just the active tab mini cart will change and the other tab mini cart does not change. By this module any mini cart change will be sync in all the opened tabs.
 
 # Installation
  
