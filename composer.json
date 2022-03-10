@@ -1,0 +1,20 @@
+{
+  "name": "darvishani/cart-auto-load",
+  "version": "1.0.0",
+  "description": "to update magento cart",
+  "type": "magento2-module",
+  "require": {
+    "magento/framework": "*"
+  },
+  "license": [
+    "MIT"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Darvishani\\CartAutoLoad\\": ""
+    }
+  }
+}

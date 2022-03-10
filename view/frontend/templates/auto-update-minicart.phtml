@@ -1,0 +1,37 @@
+<?php
+/**
+ * @var $view_model \Darvishani\CartAutoLoad\ViewModel\AutoLoadVM
+ */
+$view_model=$block->getViewModel();
+
+if($view_model->isEnable()){
+
+?>
+
+<script>
+    require(['jquery',
+        'Magento_Customer/js/customer-data',
+    ], function ($, customerData) {
+
+        const minicart_channel = new BroadcastChannel("mini-cart-channel");
+
+        minicart_channel.addEventListener("message", e => {
+            var sections = ['cart'];
+            customerData.invalidate(sections);
+            customerData.reload(sections, true);
+        });
+
+        let summary_count = 0;
+        customerData.get('cart').subscribe(
+            function (cartData) {
+                if (summary_count != cartData.summary_count) {
+                    minicart_channel.postMessage("update mini cart data");
+                    summary_count = cartData.summary_count;
+                }
+            });
+
+    });
+</script>
+<?php
+}
+?>
