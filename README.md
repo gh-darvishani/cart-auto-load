@@ -9,7 +9,7 @@ As you know, if a customer has serverla open browser tabs and  adds a product to
 # Installation
  
 
-`composer require darvishani/darvishani/cart-auto-load:"dev-master"`
+`composer require darvishani/cart-auto-load:"dev-master"`
 
 # Features
 
